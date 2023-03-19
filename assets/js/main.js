@@ -266,7 +266,7 @@ const app = {
     },
     loadConfig: function () {
         this.isRandom = this.config.isRandom;
-        this.isRandom = this.config.isRepeat;
+        this.isRepeat = this.config.isRepeat;
     },
     nextSong: function () {
         this.currentIndex++;
@@ -306,8 +306,8 @@ const app = {
         this.render();
 
         // Hiển thị trạng thái ban đầu của repeatBtn and randomBtn
-        repeatBtn.classList.toggle("active", this.isRepeat);
         randomBtn.classList.toggle("active", this.isRandom);
+        repeatBtn.classList.toggle("active", this.isRepeat);
     },
 };
 
